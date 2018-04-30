@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchUsers } from "../actions/allUsersActions";
-import { fetchUser } from "../actions/userSelectedAction";
-import { clearUser } from "../actions/userActions";
+import { fetchUser } from "../actions/userActions";
 
 class AllUsers extends Component {
   componentDidMount() {
@@ -10,12 +9,11 @@ class AllUsers extends Component {
   }
 
   clicked = user => {
-    this.props.clearUser();
     this.props.fetchUser(user._id);
   };
 
   render() {
-    const { user } = this.props.allUsers;
+    const { users } = this.props;
     const currentYear = new Date().getFullYear();
     return (
       <div className="card">
@@ -23,8 +21,8 @@ class AllUsers extends Component {
           <h5 className="card-title text-muted text-left">
             Visitantes Anteriores
           </h5>
-          {user
-            ? user.map(user => (
+          {users
+            ? users.map(user => (
                 <h6
                   key={user._id}
                   className="card-text text-left"
@@ -42,9 +40,7 @@ class AllUsers extends Component {
 }
 
 const mapStateToProps = state => ({
-  allUsers: state.allUsers
+  users: state.users
 });
 
-export default connect(mapStateToProps, { fetchUsers, fetchUser, clearUser })(
-  AllUsers
-);
+export default connect(mapStateToProps, { fetchUsers, fetchUser })(AllUsers);

@@ -9,9 +9,7 @@ class UserForm extends Component {
     name: "",
     age: "",
     country: "",
-    nameError: "",
-    ageError: "",
-    countryError: ""
+    ageError: ""
   };
 
   componentDidMount() {
@@ -25,24 +23,9 @@ class UserForm extends Component {
   validate = () => {
     let isError = false;
 
-    if (this.state.name.length == 0) {
-      isError = true;
-      this.state.nameError = "Name is required";
-    }
-
-    if (this.state.country.length == 0) {
-      isError = true;
-      this.state.countryError = "Country is required";
-    }
-
     if (this.state.age < 0) {
       isError = true;
       this.state.ageError = "Age has to be a positive number";
-    }
-
-    if (this.state.age.length == 0) {
-      isError = true;
-      this.state.ageError = "Age is required";
     }
 
     this.setState({
@@ -70,9 +53,7 @@ class UserForm extends Component {
         name: "",
         age: "",
         country: "",
-        nameError: "",
-        ageError: "",
-        countryError: ""
+        ageError: ""
       });
 
       this.props.fetchUsers();
@@ -80,11 +61,7 @@ class UserForm extends Component {
   };
 
   render() {
-    const countries = [];
-    this.props.countries.countries &&
-      this.props.countries.countries.map(country =>
-        countries.push(country.name)
-      );
+    const { countries } = this.props;
 
     return (
       <form onSubmit={this.handleSubmit} className="col">
@@ -119,7 +96,10 @@ class UserForm extends Component {
             <option value="" selected disabled>
               Paises
             </option>
-            {countries.map(country => <option key={country}>{country}</option>)}
+            {countries &&
+              countries.map(country => (
+                <option key={country.name}>{country.name}</option>
+              ))}
           </select>
           {this.state.countryError ? <p>{this.state.countryError}</p> : ""}
         </div>
