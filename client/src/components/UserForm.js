@@ -25,12 +25,8 @@ class UserForm extends Component {
 
     if (this.state.age < 0) {
       isError = true;
-      this.state.ageError = "Age has to be a positive number";
+      this.setState({ ageError: "Age has to be a positive number" });
     }
-
-    this.setState({
-      ...this.state
-    });
 
     return isError;
   };
@@ -66,7 +62,7 @@ class UserForm extends Component {
     return (
       <form onSubmit={this.handleSubmit} className="col">
         <div className="form-group row">
-          <label className="col-sm-2 col-12" for="nameContent">
+          <label className="col-sm-2 col-12" htmlFor="nameContent">
             <span className="labels">Nombre:</span>
           </label>
           <input
@@ -82,7 +78,7 @@ class UserForm extends Component {
           <div className="invalid-feedback">Name is required</div>
         </div>
         <div className="form-group row input-countries">
-          <label className="col-sm-2 col-12" for="countryContent">
+          <label className="col-sm-2 col-12" htmlFor="countryContent">
             <span className="labels">Pais</span>
           </label>
           <select
@@ -93,7 +89,7 @@ class UserForm extends Component {
             value={this.state.country}
             onChange={this.handleChange}
           >
-            <option value="" selected disabled>
+            <option value="" disabled>
               Paises
             </option>
             {countries &&
@@ -104,7 +100,7 @@ class UserForm extends Component {
           {this.state.countryError ? <p>{this.state.countryError}</p> : ""}
         </div>
         <div className="form-group row input-age">
-          <label className="col-sm-2 col-12" for="ageContent">
+          <label className="col-sm-2 col-12" htmlFor="ageContent">
             <span className="labels">Edad</span>
           </label>
           <input
