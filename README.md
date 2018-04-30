@@ -1,40 +1,29 @@
-# Project Title
+## Project Title
 
 Intive Proyect
 
-## Getting Started
+## Synopsis
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Challenge proyect for software company Intive-FDV, this proyect was about adding a person through a form and greeting them with the entered data, and also list with all the previous users.
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
-First: Clone proyect using this command 
-Second: npm install in the proyect's root to install server dependencies
-Third: nom run client install also in the proyect's root to install client dependencies
-Four: You need to have install nodemon, if you don't have nodemon execute this command in the terminal npm install nodemo -dev
-Fith: Start App by using the command npm run dev
+* First: Clone proyect using this command 
+* Second: npm install in the proyect's root to install server dependencies
+* Third: nom run client install also in the proyect's root to install client dependencies
+* Four: You need to have install nodemon, if you don't have nodemon execute this command in the terminal npm install nodemo -dev
+* Fifth: Start App by using the command npm run dev
 
 ## Running the tests
 
 No automated tests in the proyect
 
-### Break down into end to end tests
+## API Reference
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+* POST: api/users to insert users, required fields are: name, coountry and age
+* GET: api/users gets a list of all the previous registered users
+* GET: api/users/:id gets one user through its id
+* GET: https://restcountries.eu/rest/v2/all it gets an array with a list of countries
 
 ## Deployment
 
@@ -46,9 +35,9 @@ Add additional notes about how to deploy this on a live system
 * React - Front
 * Bootstrap 4
 
-## Versioning
+## Version
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+  1.0.0
 
 ## Authors
 
