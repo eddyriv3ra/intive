@@ -4,7 +4,7 @@ Intive-FDV Project
 
 ## Synopsis
 
-Challenge project for software company Intive-FDV, this project was about adding a person through a form and greeting them with the entered data, and also list with all the previous users.
+Challenge project for software company Intive-FDV, this project is about adding a person through a form and greeting them with the entered data, and also show a list with all the previous users. When a previous user is selected it retrieves the data in the database using an API and greets them again.
 
 ### Installing
 
