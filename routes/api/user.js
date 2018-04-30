@@ -22,7 +22,7 @@ router.post("/", (req, res) => {
   newUser
     .save()
     .then(user => {
-      res.json({ user });
+      res.json(user);
     })
     .catch(err => res.json(err));
 });
@@ -30,8 +30,8 @@ router.post("/", (req, res) => {
 router.get("/", (req, res) => {
   User.find()
     .sort({ date_added: -1 })
-    .then(user => res.json({ user }))
-    .catch(err => res.json({ err }));
+    .then(user => res.json(user))
+    .catch(err => res.json(err));
 });
 
 router.get("/:id", (req, res) => {

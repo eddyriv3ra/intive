@@ -3,13 +3,13 @@ import { connect } from "react-redux";
 
 class Title extends Component {
   render() {
-    const { user } = this.props.user;
-    const { userSelected } = this.props.userSelected;
+    const { user } = this.props;
+    const { userSelected } = this.props;
 
     let userName;
 
     if (user) {
-      userName = user.user.name;
+      userName = user.name;
     } else if (userSelected) {
       userName = userSelected.name;
     }

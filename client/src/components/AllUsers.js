@@ -24,7 +24,7 @@ class AllUsers extends Component {
             Visitantes Anteriores
           </h5>
           {user
-            ? user.user.map(user => (
+            ? user.map(user => (
                 <h6
                   key={user._id}
                   className="card-text text-left"

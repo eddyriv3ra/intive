@@ -3,13 +3,12 @@ import { connect } from "react-redux";
 
 class Greet extends Component {
   render() {
-    const { user } = this.props.user;
-    const { userSelected } = this.props.userSelected;
+    const { user, userSelected } = this.props;
 
     let userData;
 
     if (user) {
-      userData = user.user;
+      userData = user;
     } else if (userSelected) {
       userData = userSelected;
     }
