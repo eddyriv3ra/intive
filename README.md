@@ -8,7 +8,7 @@ Challenge proyect for software company Intive-FDV, this proyect was about adding
 
 ### Installing
 
-* First: Clone proyect using this command 
+* First: Clone proyect using this command through the terminal https://github.com/eddyriv3ra/intive.git
 * Second: npm install in the proyect's root to install server dependencies
 * Third: nom run client install also in the proyect's root to install client dependencies
 * Four: You need to have install nodemon, if you don't have nodemon execute this command in the terminal npm install nodemo -dev
