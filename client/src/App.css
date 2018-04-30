@@ -1,0 +1,69 @@
+.App {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  background-color: #eeeeee;
+  margin: 5%;
+  min-height: 600px;
+  border: #222 2px solid;
+  border-radius: 15px;
+}
+
+.self-align-center {
+  margin-left: 10px;
+}
+
+form {
+  font-family: "Roboto", "Open Sans", sans-serif;
+}
+
+form label {
+  font-weight: 700;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.card {
+  overflow-y: scroll;
+  height: 400px;
+  -webkit-box-shadow: 0px 3px 31px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 31px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 31px -8px rgba(0, 0, 0, 0.75);
+}
+
+.title {
+  padding-bottom: 20px;
+}
+
+.labels {
+  position: relative;
+  top: 7px;
+}
+
+button {
+  float: right;
+  margin-right: 15%;
+  width: 140px;
+}
+
+.greeting {
+  font-size: 25px;
+}
+
+.greet-style {
+  font-weight: 700;
+}
+
+.greeting-box {
+  position: relative;
+  top: 90px;
+}
+
+.input-age {
+  margin-top: 40px;
+}
+
+.input-countries {
+  margin-top: 40px;
+}
