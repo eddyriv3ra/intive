@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Provider } from "react-redux";
+import { BrowserRouter, Route } from "react-router-dom";
 import store from "./store";
 import Main from "./components/Main";
 
@@ -9,9 +10,11 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div className="App">
-          <Main />
-        </div>
+        <BrowserRouter>
+          <div className="App">
+            <Route path="/" component={Main} />
+          </div>
+        </BrowserRouter>
       </Provider>
     );
   }
